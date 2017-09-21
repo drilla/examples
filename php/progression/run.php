@@ -8,16 +8,26 @@ include "Progression.php";
  */
 
 try {
+
+    /**
+     * read arguments from terminal
+     */
     if (isset($argv[1])) {
         $testingString = $argv[1];
     } else {
         throw new Exception('String argument required.');
     }
 
+    /**
+     * check format
+     */
     if (!Progression::isStringFormatValid($testingString)) {
         throw new  Exception('Invalid string format.');
     }
 
+    /**
+     * check progression and return resule
+     */
     if (Progression::isProgression($testingString)) {
         echo "String '$testingString' is a progression!";
     } else {
