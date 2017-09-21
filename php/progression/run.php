@@ -19,19 +19,15 @@ try {
     }
 
     if (Progression::isProgression($testingString)) {
-        echo 'String is a progression!';
+        echo "String '$testingString' is a progression!";
     } else {
-        echo 'String is NOT a progression!';
+        echo "String '$testingString' is NOT a progression!";
     }
 } catch (Throwable $error) {
     echo $error->getMessage();
 } finally {
-    echo '\n';
+    echo "\n";
     return 1;
 }
-
-
-
-?>
 
 
